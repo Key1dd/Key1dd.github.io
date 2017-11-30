@@ -2,10 +2,9 @@ function prepareGallery(){
    if(!document.getElementsByTagName) return false;
    if(!document.getElementById) return false;
    if(!document.gerElementById("imagegallery")) return false;                           
- //check getElementsByTage and getElementById methods 
- var gallery = document.getElementById("imagegallery");
- var links = gallery.getElementsByTagName("a");
- for (var i = 0; i < links.length; i++){
+   var gallery = document.getElementById("imagegallery");
+   var links = gallery.getElementsByTagName("a");
+   for (var i = 0; i < links.length; i++){
     
   links[i].onclick = function(){
    return showPic(this) ? false : true;
