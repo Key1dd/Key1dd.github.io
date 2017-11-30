@@ -11,6 +11,7 @@ function prepareGallery(){
    }
   }
  }
+
 function showPic(whichpic) { 
    if(!document.getElementById("placeholder")) return false;
             var source = whichpic.getAttribute("href");
@@ -26,3 +27,17 @@ function showPic(whichpic) {
       }
    return true;
    }
+
+function addLoadEvent(func) {
+  var oldonload = window.onload;
+  if (typeof window.onload != 'function') {
+    window.onload = func;
+  } else {
+    window.onload = function() {
+      oldonload();
+      func();
+    }
+  }
+}
+
+addLoadEvent(prepareGallery);
