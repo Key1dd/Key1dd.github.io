@@ -6,17 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Image Gallery</title>
-    <script>
-        function showPic(whichpic) { 
-            var source = whichpic.getAttribute("href");
-            var placeholder = document.getElementById("placeholder");
-            placeholder.setAttribute("src", source);
-
-            var text = whichpic.getAttribute("title");
-            var description = document.getElementById("description");
-            description.firstChild.nodeValue = text;
-        }
-    </script>
+    <script src="javascript.js"></script>
 </head>
 
 <body>
