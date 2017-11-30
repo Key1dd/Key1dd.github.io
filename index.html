@@ -1,15 +1,43 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>home page</title>
-    <style>
-      p{
-color:red;
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Gallery</title>
+    <script>
+        function showPic(whichpic) { 
+            var source = whichpic.getAttribute("href");
+            var placeholder = document.getElementById("placeholder");
+            placeholder.setAttribute("src", source);
+
+            var text = whichpic.getAttribute("title");
+            var description = document.getElementById("description");
+            description.firstChild.nodeValue = text;
         }
-      </style>
-    </head>
-  <body>
-<h1>Hello world</h1>
-<p>welcome to panda home<p>
+    </script>
+</head>
+
+<body>
+    <h1>Snapshots</h1>
+    <ul>
+        <li>
+            <a href="Users/jiayuanqiu/Desktop/jsdom/pic/five.JPEG" onclick="showPic(this);return false;" title="A fireworks display"> Fireworks</a>
+        </li>
+        <li>
+            <a href="images/coffee.jpg" onclick="showPic(this);return false;" title="A cup of black coffee"> Coffee</a>
+        </li>
+        <li>
+            <a href="images/rose.jpg" onclick="showPic(this);return false;" title="A red, red rose"> Rose</a>
+        </li>
+        <li>
+            <a href="images/bigben.jpg" onclick="showPic(this);return false;" title="The famous clock"> Big Ben</a>
+        </li>
+    </ul>
+
+    <p id="description">choose an image.</p>
+    <img id="placeholder" src="picture/one.jpg" alt="my image gallery" />
 </body>
-  </head>
+
+</html>
