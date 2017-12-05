@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hello Panda</title>
-    <link rel="stylesheet" href="styles/indexstylesheet.css" media="screen"/>
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
 </head>
-
 <body>
-    <a href="loginpage.html">Login</a>
-    <h1>Hello Panda</h1>
-    <h2>你好，熊猫</h2>
-    <hr>
-    <br>
-    <img src="picture/webpic.jpg" width="350">
-    <ul>
-        <li>
-            <a href="index1.html">Object 1( Gallery )</a>
-        </li>
+  <div id="app">
+    {{ message }}
+  </div>
+  <div id="app-1">
+    <p>{{ message }}</p>
+    <input v-model="message">
+  </div>
 
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello World! Panda世界'
+      }
+    })
+    var app6 = new Vue({
+      el: '#app-1',
+      data: {
+    message: 'Hello Panda!初探Vue'
+  }
+})
+  </script>
 </body>
-
 </html>
