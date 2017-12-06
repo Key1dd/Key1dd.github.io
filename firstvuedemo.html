@@ -6,7 +6,7 @@
 </head>
 <body>
   <div id="appHome">
-  <a v-bind:href="index.html">Return Homepage</a>
+  <a v-bind:href="url">{{ message }}</a>
   </div>
   <div id="app">
     {{ message }}
@@ -26,13 +26,14 @@
     var app6 = new Vue({
       el: '#app-1',
       data: {
-    message: 'Hello Panda!初探Vue'
+    message: 'Hello Panda! 初探Vue'
       } 
     })
     var app2 = new Vue({
-      el:'#appHome',
+      el: '#appHome',
+      url:'index.html',
       data:{
-         index.html:'index.html'
+         message:'return homepage'
       }
     })
   </script>
